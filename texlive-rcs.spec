@@ -85,6 +85,7 @@ TeX, and test cases.
 %doc %{_texmfdistdir}/source/latex/rcs/src/test/rcsid-param.tex
 %doc %{_texmfdistdir}/source/latex/rcs/src/test/rcsid.tex
 %doc %{_texmfdistdir}/source/latex/rcs/src/test/under_score.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -95,3 +96,5 @@ TeX, and test cases.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
