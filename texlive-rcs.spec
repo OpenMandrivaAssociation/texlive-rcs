@@ -5,8 +5,8 @@
 # catalog-license gpl
 # catalog-version undef
 Name:		texlive-rcs
-Version:	20070606
-Release:	10
+Version:	20170414
+Release:	1
 Summary:	Use RCS (revision control system) tags in LaTeX documents
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/rcs
