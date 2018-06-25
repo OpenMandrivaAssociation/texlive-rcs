@@ -1,5 +1,5 @@
 Name:		texlive-rcs
-Version:	20170414
+Version:	20180303
 Release:	1
 Summary:	Use RCS (revision control system) tags in LaTeX documents
 Group:		Publishing
