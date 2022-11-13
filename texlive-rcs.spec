@@ -1,13 +1,13 @@
 Name:		texlive-rcs
-Version:	20190228
+Version:	15878
 Release:	1
 Summary:	Use RCS (revision control system) tags in LaTeX documents
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/rcs
 License:	GPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/rcs.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/rcs.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/rcs.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/rcs.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/rcs.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/rcs.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -28,12 +28,12 @@ documentation of the implementation, style information for AUC-
 TeX, and test cases.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -44,7 +44,8 @@ TeX, and test cases.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
